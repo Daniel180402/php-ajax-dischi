@@ -7,5 +7,5 @@
             'result' => $dischi,
             'length' => count($dischi)
         ]
-        );
+    );
 ?>
