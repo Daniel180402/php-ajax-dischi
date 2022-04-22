@@ -4,8 +4,10 @@ const app = new Vue({
         dischi: [],
     }),
     created() {
-        axios.get("/data.php").then((res) => {
-            this.dischi = res.data;
+        axios.get("http://localhost/PHP/php-ajax-dischi/controller.php").then((result) => {
+            this.dischi = result.data.results;
+        }).catch((error) =>{
+            console.warn(error);
         });
-    },
+    }
 });

@@ -13,10 +13,10 @@
     <?php
         include __DIR__ . '/data.php';
     ?>
-    <main>
+    <main id="app">
         <div class="container h-100 d-flex align-items-center">
             <div class="disc-wrapper d-flex flex-wrap">
-                <?php foreach($dischi as $disc){ ?>
+                <!-- <?php foreach($dischi as $disc){ ?>
                 <div class="card">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
@@ -25,10 +25,19 @@
                         <p class="card-text"><?php echo $disc["year"]; ?></p>
                     </div>
                 </div>
-                <?php } ?>
+                <?php } ?> -->
+                <div class="card" v-for="disc in dischi">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ disc.title }} </h5>
+                        <p class="card-text"><?php echo $disc["author"]; ?></p>
+                        <p class="card-text"><?php echo $disc["year"]; ?></p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
