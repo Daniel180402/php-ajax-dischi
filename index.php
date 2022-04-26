@@ -17,17 +17,17 @@
         <div class="container h-100 d-flex align-items-center">
             <div class="disc-wrapper d-flex flex-wrap">
                 <div class="card" v-for="element in disc">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" :src="element.poster" :alt="element.title">
                     <div class="card-body">
                         <h5 class="card-title"> {{ element.title }} </h5>
-                        <p class="card-text">{{ element.author }}</p>
-                        <p class="card-text">{{ element.year }}</p>
+                        <p class="card-text"> {{ element.author }} </p>
+                        <p class="card-text"> {{ element.year }} </p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
