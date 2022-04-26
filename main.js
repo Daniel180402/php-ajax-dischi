@@ -1,12 +1,12 @@
 const app = new Vue({
     el: "#app",
     data: () => ({
-        dischi: [],
+        disc: [],
     }),
-    created() {
-        axios.get('http://localhost/PHP/php-ajax-dischi/controller.php').then((result) => {
-            this.dischi = result.data.results;
-            console.warn(result);
+    mounted() {
+        axios.get('http://localhost/PHP/php-ajax-dischi/controller.php').then((response) => {
+            this.disc = response.data.results;
+            console.warn(response);
         }).catch((error) =>{
             console.warn(error);
         });

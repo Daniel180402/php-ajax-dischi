@@ -1,3 +1,6 @@
+<?php
+    include __DIR__ . '/data.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +13,15 @@
     <title>Dischi</title>
 </head>
 <body>
-    <?php
-        include __DIR__ . '/data.php';
-    ?>
     <main id="app">
         <div class="container h-100 d-flex align-items-center">
             <div class="disc-wrapper d-flex flex-wrap">
-                <div class="card" v-for="disc in dischi">
+                <div class="card" v-for="element in disc">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"> {{ disc.title }} </h5>
-                        <p class="card-text">{{ disc.author }}</p>
-                        <p class="card-text">{{ disc.year }}</p>
+                        <h5 class="card-title"> {{ element.title }} </h5>
+                        <p class="card-text">{{ element.author }}</p>
+                        <p class="card-text">{{ element.year }}</p>
                     </div>
                 </div>
             </div>
